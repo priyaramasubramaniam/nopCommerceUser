@@ -18,7 +18,7 @@ public class LoginPage {
     @FindBy(xpath = "//input[@id='Email']") WebElement txtUsername;
     @FindBy(xpath = "//input[@id='Password']") WebElement txtPassword;
     @FindBy(xpath = "//button[normalize-space()='Log in']") WebElement btnLogin;
-    @FindBy(xpath = "//a[@class='ico-login']") WebElement btnLogout;
+    @FindBy(xpath = "//a[@class='ico-logout']") WebElement btnLogout;
 
 
     public void clickLogin() { linkLogin.click();}
