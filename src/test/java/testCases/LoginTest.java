@@ -5,6 +5,8 @@ import org.testng.annotations.*;
 import pageObjects.LoginPage;
 import utilities.ReadConfig;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginTest extends BaseClass{
 
     @Test
@@ -17,6 +19,7 @@ public class LoginTest extends BaseClass{
         lp.setTxtPassword(readConfig1.setPassword());
         lp.clickSubmitBtn();
         Thread.sleep(1000);
+        TimeUnit.MINUTES.sleep(30);
         if(lp.checkLogoutBtnPresent() == true)
         {
             Assert.assertTrue(true);
