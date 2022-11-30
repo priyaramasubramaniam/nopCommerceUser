@@ -40,4 +40,7 @@ public class ReadConfig {
     //Login Page
     public String setUsername(){ return pro.getProperty("userName");}
     public String setpassword(){ return pro.getProperty("passWord");}
+
+    //Add to cart
+    public String setProductName() { return pro.getProperty("HTC One Mini Blue"); }
 }
