@@ -33,6 +33,7 @@ public class ReadConfig {
     public String setDay() { return pro.getProperty("Day");}
     public String setMonth() { return pro.getProperty("Month");}
     public String setYear() { return pro.getProperty("Year");}
+
     public String setCompanyName() { return pro.getProperty("CompanyName");}
     public String setPassword() { return pro.getProperty("Password");}
     public String setConfirmPassword() { return pro.getProperty("ConfirmPassword");}
@@ -42,5 +43,5 @@ public class ReadConfig {
     public String setpassword(){ return pro.getProperty("passWord");}
 
     //Add to cart
-    public String setProductName() { return pro.getProperty("HTC One Mini Blue"); }
+    public String setProductName() { return pro.getProperty("productName"); }
 }

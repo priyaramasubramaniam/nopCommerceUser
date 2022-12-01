@@ -4,13 +4,14 @@
     <listeners>
         <listener class-name="utilities.Reporting"></listener>
     </listeners>
+    <parameter name="browser" value="chrome"></parameter>
+
     <test thread-count="5" name="Test">
-        <parameter name="browser" value="chrome"></parameter>
         <classes>
-<!--            <class name="testCases.RegisterTest"/>-->
-<!--            <class name="testCases.RegisterMandatory"></class>-->
-<!--            <class name="testCases.RegisterWithEmpty"></class>-->
-            <class name="testCases.LoginTest"></class>
+
+            <class name="testCases.RegisterTest"></class>
+            <class name="testCases.AddToCartTest"></class>
+
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -28,7 +28,7 @@ public class BaseClass {
     Logger logger;
 
     @Parameters("browser")
-    @BeforeClass
+    @BeforeSuite
     public void setup(String br) {
         logger = Logger.getLogger("nopCommerce");
         PropertyConfigurator.configure("Log4j.properties");
@@ -55,12 +55,12 @@ public class BaseClass {
         driver.manage().window().maximize();
     }
 
-    @AfterClass
+    @AfterSuite
     public void teardown() {
         driver.quit();
     }
 
-    public String randomestring() {
+    public static String randomestring() {
         return (RandomStringUtils.randomAlphabetic(8));
     }
 
