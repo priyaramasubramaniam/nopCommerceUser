@@ -8,10 +8,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage {
 
-    WebDriver driver;
+    WebDriver ldriver;
     public RegisterPage(WebDriver rdriver)
     {
-        this.driver = rdriver;
+        ldriver = rdriver;
         PageFactory.initElements(rdriver, this);
     }
 
@@ -48,10 +48,14 @@ public class RegisterPage {
         dropdown1.selectByVisibleText(year);
     }
 
-    public void setTxtEmail(String email) { txtEmail.sendKeys(email);}
+    public String setTxtEmail(String email) { txtEmail.sendKeys(email);
+        return email;
+    }
     public void setTxtCompanyName(String companyName) { txtCompanyName.sendKeys(companyName);}
     public void checkNewsletterCb() { checkboxNewletter.isEnabled();}
-    public void setTxtPassword(String password) { txtPassword.sendKeys(password);}
+    public String setTxtPassword(String password) { txtPassword.sendKeys(password);
+        return password;
+    }
     public void setTxtConfirmPassword(String confirmPassword) { txtConfirmPassword.sendKeys(confirmPassword);}
     public void clickSubmitBtn() { btnSubmit.click();}
     public String getSuccessMsg() {return messageSuccess.getText();}

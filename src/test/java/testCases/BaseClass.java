@@ -28,7 +28,7 @@ public class BaseClass {
     Logger logger;
 
     @Parameters("browser")
-    @BeforeSuite
+    @BeforeClass
     public void setup(String br) {
         logger = Logger.getLogger("nopCommerce");
         PropertyConfigurator.configure("Log4j.properties");
@@ -53,9 +53,10 @@ public class BaseClass {
             driver = new EdgeDriver();
         }
         driver.manage().window().maximize();
+        driver.get(readConfig.setUrl());
     }
 
-    @AfterSuite
+    @AfterClass
     public void teardown() {
         driver.quit();
     }

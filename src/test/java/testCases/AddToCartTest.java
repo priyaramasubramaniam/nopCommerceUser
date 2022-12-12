@@ -7,9 +7,9 @@ import pageObjects.AddToCartPage;
 import pageObjects.RegisterPage;
 import utilities.ReadConfig;
 
-public class AddToCartTest extends BaseClass {
+public class AddToCartTest extends RegisterTest {
 
-    @Test
+    @Test(priority = 1)
     public void TC_AddToCart_001() throws InterruptedException {
         AddToCartPage addToCartPage = new AddToCartPage(driver);
         ReadConfig readConfig = new ReadConfig();

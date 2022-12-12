@@ -44,4 +44,5 @@ public class ReadConfig {
 
     //Add to cart
     public String setProductName() { return pro.getProperty("productName"); }
+    public String setInvalidProductName() {return pro.getProperty("invalidProductName");}
 }
