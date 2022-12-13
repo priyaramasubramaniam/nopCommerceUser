@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddToCartPage {
-    WebDriver ldriver2;
-    public AddToCartPage(WebDriver rdriver2)
+    WebDriver driver;
+    public AddToCartPage(WebDriver rdriver)
     {
-        ldriver2 = rdriver2;
-        PageFactory.initElements(rdriver2, this);
+        this.driver = rdriver;
+        PageFactory.initElements(rdriver, this);
     }
 
     @FindBy(xpath = "//input[@id='small-searchterms']") WebElement txtSearchBox;

@@ -10,9 +10,7 @@
         <classes>
 
             <class name="testCases.RegisterTest"></class>
-<!--            <class name="testCases.AddToCartTest"></class>-->
-<!--            <class name="testCases.SearchProductTest"></class>-->
-            <class name="testCases.LoginTest"></class>
+            <class name="testCases.AddToCartTest"></class>
 
         </classes>
     </test> <!-- Test -->

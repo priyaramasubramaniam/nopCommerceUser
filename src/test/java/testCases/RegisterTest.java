@@ -7,8 +7,10 @@ import pageObjects.RegisterPage;
 
 public class RegisterTest extends BaseClass{
 
-    @Test(priority = 1)
+    @Test
     public void TC_Register_001() throws InterruptedException {
+        driver.get(URL);
+        logger.info("URL opened");
         RegisterPage rp = new RegisterPage(driver);
         rp.clickRegisterLink();
         logger.info("Registerlink is clicked");
@@ -24,13 +26,11 @@ public class RegisterTest extends BaseClass{
         logger.info("Month is Selected");
         rp.selectYear(Year);
         logger.info("Year is Selected");
-        String email = rp.setTxtEmail(randomestring() + "@gmail.com");
-        System.out.println(email);
+        rp.setTxtEmail(randomestring() + "@gmail.com");
         logger.info("Email is entered");
         rp.setTxtCompanyName(CompanyName);
         logger.info("Company name is enterd");
-        String pwd = rp.setTxtPassword(Password);
-        System.out.println(pwd);
+        rp.setTxtPassword(Password);
         logger.info("Password is entered");
         rp.setTxtConfirmPassword(ConfirmPassword);
         logger.info("Confirm password is entered");
