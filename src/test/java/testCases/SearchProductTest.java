@@ -19,7 +19,6 @@ public class SearchProductTest extends BaseClass{
         }
         else {
             Assert.assertTrue(false);
-            System.out.println(sp.getProductName());
         }
 
     }
